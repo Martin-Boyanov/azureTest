@@ -1,6 +1,8 @@
 import { supabase } from "@/lib/supabase";
 import { addTodo, deleteTodo, toggleTodo } from "./actions";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const { data: todos, error } = await supabase
     .from("todos")
